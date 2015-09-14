@@ -45,6 +45,11 @@ and learn to deploy your application to Rackspace Container Service using Visual
 [get-vs]: https://www.visualstudio.com/downloads/download-visual-studio-vs
 
 ## <a name="CreateApp"></a> Create an ASP.NET 5 Application ##
+Create a new ASP.NET 5 application.
+
+1. Open Visual Studio
+2. Go to File &rarr; New &rarr; Project then select the ASP.NET Web Application template.
+![New Project Window]({% asset_path 030-deploy-from-visual-studio/new-project.png %})
 
 * Kestrel command should look like this:
 
