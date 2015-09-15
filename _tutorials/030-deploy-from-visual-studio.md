@@ -28,7 +28,6 @@ and learn how to deploy your application to Rackspace Container Service using Vi
 * [Create an ASP.NET 5 Application](#CreateApp)
 * [Deploy to Docker](#Publish)
   * [Publish from Visual Studio](#VisualStudioPublish)
-  * [Publish from Command Line](#CommandLinePublish)
   * [Publish from MS Build](#MSBuildPublish)
 * [Troubleshooting](#Troubleshooting)
 
@@ -102,14 +101,15 @@ Remember this value as it will be required later.
 6. Click Validate Connection to verify your settings.
 7. Click Publish to deploy your application to the Rackspace Container Service. The deploy progress and any output is displayed in the Azure App Service Activity window.
 
-### <a name="CommandLinePublish"></a> Publish from Command Line ###
-
 ### <a name="MSBuildPublish"></a> Publish from MS Build ###
+*If you have not already generated a publish profile in Visual Studio, go back to the previous section and do that first.*
+
 
 ## <a name="Troubleshooting"></a> Troubleshooting ##
 
-* [client and server don't have same version](#DockerVersions)
 * [unable to find a node with port 80 available](#PortsFull)
+* [client and server don't have same version](#DockerVersions)
+
 
 ### <a name="PortsFull"></a>unable to find a node with port 80 available ###
 
@@ -144,18 +144,19 @@ docker host, that you may need to tweak your publish profile to use a different 
 If you see an error message like the one above, follow the steps below to
 explicitly specify which version of the docker client to use.
 
-1. Identify the version of Docker used by the server from the error message.
-2. Download the appropriate docker client. Below are direct links from the [Docker releases page][docker-releases].
+1. Check if the Docker client is in your PATH. If it is, remove it and reboot. If that doesn't correct the error, move on to step 2.
+2. Identify the version of Docker used by the server from the error message.
+3. Download the appropriate docker client. Below are direct links from the [Docker releases page][docker-releases].
   * [Docker Client - 1.6.1](https://get.docker.com/builds/Windows/x86_64/docker-1.6.1.exe)
-3. Open Windows Explorer and browse to the Docker Tools extension directory, e.g. `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Windows Azure Tools\Docker`.
+4. Open Windows Explorer and browse to the Docker Tools extension directory, e.g. `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Microsoft\Windows Azure Tools\Docker`.
 
         cd /d "%VS140ComnTools%\..\IDE\Extensions\Microsoft\Windows Azure Tools\Docker"
-4. Create a new directory and name it after the downloaded Docker client version.
+5. Create a new directory and name it after the downloaded Docker client version.
 
         mkdir 1.6.1
-5. Move the docker client that you downloaded in step 2 into this directory and rename it to `docker.exe`.
-6. Now, in the Visual Studio Solution Explorer browse to the Properties/PublishProfiles directory. Open the PowerShell script for your publish profile, e.g. MyProfile-publish.ps1.
-7. Go to the `Ensure-DockerCommand` function and update it to use the new directory you created.
+6. Move the docker client that you downloaded in step 2 into this directory and rename it to `docker.exe`.
+7. Now, in the Visual Studio Solution Explorer browse to the Properties/PublishProfiles directory. Open the PowerShell script for your publish profile, e.g. MyProfile-publish.ps1.
+8. Go to the `Ensure-DockerCommand` function and update it to use the new directory you created.
 
     ```bash
     # Original Line
