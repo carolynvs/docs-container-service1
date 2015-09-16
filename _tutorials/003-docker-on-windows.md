@@ -3,8 +3,8 @@ title: Docker on Windows
 description: Provides instructions on how to install the Docker toolbox on Windows
 topics:
   - docker
----  
- 
+---
+
 #Using the Docker client on Windows
 
 
@@ -20,9 +20,9 @@ In an Windows installation, the docker daemon is running inside a Linux virtual 
 
 In Windows, the Docker host address is the address of the Linux VM. When you start the VM with docker-machine it is assigned an IP address. When you start a container, the ports on a container map to ports on the VM. To see this in practice, work through the exercises on this page.
 
- 
-##System Requirements 
- 
+
+##System Requirements
+
 Your computer must be running on one of the following Windows operating systems to run Docker:
 
 * Windows 7.1
@@ -31,9 +31,9 @@ Your computer must be running on one of the following Windows operating systems 
 **Note** Windows 10 is not currently supported.
 
 **Important** Make sure your Windows system supports Hardware Virtualization Technology and that virtualization is enabled. For Windows 7, run the Microsoft® Hardware-Assisted Virtualization Detection Tool and follow the on-screen instructions.
- 
-##Installing Docker Toolbox	
- 
+
+##Installing Docker Toolbox
+
 To install the Docker toolbox, follow these instructions:
  
 1. Go to the Docker Toolbox page.
