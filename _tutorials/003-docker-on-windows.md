@@ -18,6 +18,9 @@ On a typical Linux installation, the Docker client, the Docker daemon, and any c
 
 In an Windows installation, the docker daemon is running inside a Linux virtual machine. You use the Windows Docker client to talk to the Docker host VM. Your Docker containers run inside this host.
 
+<!-- TODO: REPLACE WITH OUR OWN GRAPHIC -->
+![Docker on Windows Topology](https://docs.docker.com/installation/images/win_docker_host.svg)
+
 In Windows, the Docker host address is the address of the Linux VM. When you start the VM with docker-machine it is assigned an IP address. When you start a container, the ports on a container map to ports on the VM. To see this in practice, work through the exercises on this page.
 
 
