@@ -3,7 +3,6 @@ title: Docker on Windows
 description: Provides instructions on how to install the Docker toolbox on Windows
 topics:
   - docker
-asset_path: /Users/cons6216/Documentation/docs-container-service/_assets/
 ---  
  
 #Using the Docker client on Windows
@@ -43,26 +42,26 @@ To install the Docker toolbox, follow these instructions:
 
 3. Double-click the installer (.exe file). This launches the Docker Toolbox setup wizard.
 
-4. On the welcome page, click **Next**.
-![Docker Toolbox Install IntroScreen](../_assets/img/003-docker-on-windows/docker-toolbox-install-1.png)
+4. On the welcome page, click **Next**.<br/>
+![Docker Toolbox Install IntroScreen]({% asset_path 003-docker-on-windows/docker-toolbox-install-1.png %})
 
-5. Select a folder in which you want Docker Toolbox to be installed, or else accept the default install location. Click **Next**.
-![Docker Toolbox Install Destination](../_assets/img/003-docker-on-windows/docker-toolbox-install-2.png)
+5. Select a folder in which you want Docker Toolbox to be installed, or else accept the default install location. Click **Next**.<br/>
+![Docker Toolbox Install Destination]({% asset_path 003-docker-on-windows/docker-toolbox-install-2.png %})
 
-6. On the **Select Components** page, select the components that you want to install, and then click **Next**.
-![Docker Toolbox Install Components](../_assets/img/003-docker-on-windows/docker-toolbox-install-3.png)
+6. On the **Select Components** page, select the components that you want to install, and then click **Next**.<br/>
+![Docker Toolbox Install Components]({% asset_path 003-docker-on-windows/docker-toolbox-install-3.png %})
 
-7. On the **Select Additional Tasks** page, select the additional tasks you want the setup application to perform, and then click **Next**.
-![Docker Toolbox Install Additional Tasks](../_assets/img/003-docker-on-windows/docker-toolbox-install-4.png)
+7. On the **Select Additional Tasks** page, select the additional tasks you want the setup application to perform, and then click **Next**.<br/>
+![Docker Toolbox Install Additional Tasks]({% asset_path 003-docker-on-windows/docker-toolbox-install-4.png %})
 
-8. Click **Install** to confirm that you want to install this software.
-![Docker Toolbox Install Review](../_assets/img/003-docker-on-windows/docker-toolbox-install-5.png)
+8. Click **Install** to confirm that you want to install this software.<br/>
+![Docker Toolbox Install Review]({% asset_path 003-docker-on-windows/docker-toolbox-install-5.png %})
 
-9. When asked to confirm that you really want to install this software, click **Install**.
-![Docker Toolbox Install Oracle Prompt](../_assets/img/003-docker-on-windows/docker-toolbox-install-6.png)
+9. When asked to confirm that you really want to install this software, click **Install**.<br/>
+![Docker Toolbox Install Oracle Prompt]({% asset_path 003-docker-on-windows/docker-toolbox-install-6.png %})
 
-10. Click **Finish** to exit the setup wizard.
-![Docker Toolbox Install Complete](../_assets/img/003-docker-on-windows/docker-toolbox-install-7.png)
+10. Click **Finish** to exit the setup wizard.<br/>
+![Docker Toolbox Install Complete]({% asset_path 003-docker-on-windows/docker-toolbox-install-7.png %})
 
 ##Troubleshooting Docker on Windows
 ###Installation Issues
