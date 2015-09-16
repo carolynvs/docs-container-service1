@@ -38,8 +38,8 @@ Your computer must be running on one of the following Windows operating systems 
 ##Installing Docker Toolbox
 
 To install the Docker toolbox, follow these instructions:
- 
-1. Go to the Docker Toolbox page.
+
+1. Go to the [Docker Toolbox page](https://www.docker.com/toolbox).
 
 2. Click the **Download (Windows)** link to download.
 
