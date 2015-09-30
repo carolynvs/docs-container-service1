@@ -49,20 +49,34 @@ and learn how to deploy your application to Rackspace Container Service using Vi
 First create an ASP.NET 5 application which we can deploy to Linux via a Docker container. This is possible because ASP.NET 5 now supports running on Linux with the [Kestrel web server][kestrel]. To learn more, checkout Microsoft's [ASP.NET 5 tutorial][aspnet-tutorial].
 
 1. Open Visual Studio, go to File &rarr; New &rarr; Project, then select the `ASP.NET Web Application` template.
-![New Project Window]({% asset_path 030-deploy-from-visual-studio/new-project.png %})
-3. Verify that the project builds successfully.
+
+    ![New Project Window]({% asset_path 030-deploy-from-visual-studio/new-project.png %})
+
+2. Verify that the project builds successfully.
+
+3. Edit `project.json` and add kestrel as a dependency.
+
+    ```json
+    "dependencies": {
+      "Microsoft.AspNet.Server.Kestrel": "1.0.0-beta7"
+    }
+    ```
+
 4. Edit `project.json` and update the `kestrel` command to specify the server argument. This will allow you to use the hosting.ini file with both IIS and Kestrel.
 
         "commands": {
           "web": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.WebListener --config hosting.ini",
           "kestrel": "Microsoft.AspNet.Hosting --server Microsoft.AspNet.Server.Kestrel --config hosting.ini"
         }
-4. Edit `hosting.ini` and specify the port on which your application should be hosted, e.g. 5000.
+
+5. Edit `hosting.ini` and specify the port on which your application should be hosted, e.g. 5000.
 
         server.urls=http://localhost:5000
-5. Edit your project properties and select Kestrel as the default debug profile. Set the Launch URL to the same url in your `hosting.ini` file.
+
+6. Edit your project properties and select Kestrel as the default debug profile. Set the Launch URL to the same url in your `hosting.ini` file.
 ![Project Properties]({% asset_path 030-deploy-from-visual-studio/project-properties.png %})
-6. Verify that your application runs as expected before attempting to publish to a Docker container. Select Debug &rarr; Start Debugging to start the Kestrel web server and open your web application in the browser.
+
+7. Verify that your application runs as expected before attempting to publish to a Docker container. Select Debug &rarr; Start Debugging to start the Kestrel web server and open your web application in the browser.
 ![Web Page Screenshot]({% asset_path 030-deploy-from-visual-studio/app-screenshot.png %})
 
 [kestrel]: https://github.com/aspnet/KestrelHttpServer
